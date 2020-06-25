@@ -1,0 +1,12 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locale",
+  "info": {
+    "name": "Locale"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {}
+}

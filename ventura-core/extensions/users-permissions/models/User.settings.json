@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "go_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "brands": {
+      "columnName": "project_id",
+      "collection": "brand"
+    },
+    "job_title": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "cellphone": {
+      "type": "string"
+    },
+    "office_phone": {
+      "type": "string"
+    },
+    "private_email": {
+      "type": "string"
+    },
+    "start_day": {
+      "type": "date"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "notification_mode": {
+      "type": "enumeration",
+      "enum": [
+        "Email",
+        "FPO"
+      ]
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ],
+      "default": "other"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "passport": {
+      "type": "string"
+    },
+    "office_id": {
+      "model": "offices"
+    }
+  }
+}

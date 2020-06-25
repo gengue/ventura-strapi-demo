@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "currency",
+  "info": {
+    "name": "Currency"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "abbreviation": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "is_exotic": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organisation",
+  "info": {
+    "name": "Offices"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
